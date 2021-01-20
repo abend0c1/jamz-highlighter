@@ -1,0 +1,109 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "JAMZ",
+	"patterns": 
+	[
+		{"include": "#embedded" },
+		{"include": "#string"   },
+		{"include": "#keyword"  },
+		{"include": "#comment"  }
+	],
+	"repository": 
+	{
+		"embedded": 
+		{
+			"patterns": 
+			[
+				{
+					"begin": "\\[",
+					"end": "\\]",
+					"patterns":
+					[
+						{"include": "source.rexx"}
+					],
+					"contentName": "meta.embedded.block.rexx",
+					"name": "keyword.operator.jamz"
+				}
+			]
+		},
+		"keyword": 
+		{
+			"patterns": 
+			[
+				{
+					"begin": "^\\.\\.\\s*(?i:set|rexx)\\b",
+					"end": "$",
+					"patterns":
+					[
+						{"include": "source.rexx"}
+					],
+					"contentName": "meta.embedded.block.rexx",
+					"name": "keyword.other.jamz"
+				},
+				{
+					"match": "^\\.\\.\\s*(?i:askqu|askq|asku|ask)\\s+([A-Za-z!?_][A-Za-z!?_0-9]*)\\b",
+					"captures":
+					{
+						"1": {"name": "variable.rexx"}
+					},
+					"name": "keyword.other.jamz"
+				},
+				{
+					"match": "^\\.\\.\\s*(?i:if|else|select|when|otherwise|end|quit)\\b",
+					"name": "keyword.control.jamz"
+				},
+				{
+					"match": "([-,])$",
+					"name": "keyword.operator.jamz"
+				},
+				{
+					"match": "^\\.\\.\\s*(?i:args|askqu|askq|asku|ask|auto|backup|br14|catalog|compress|copy|datevars|delete|get|getout|help|for|include|jcl|job|listcat|listvtoc|macro|map|mount|option|put|queue|queued|recover|rename|repro|restore|rexx|runon|say|scratch|set|ship|step|style|submit|sudo|table|tso|uncatalog|unmount|uss|xeq|xmit)\\b",
+					"name": "keyword.other.jamz"
+				},
+				{
+					"match": "\\b(?i:cancel|read|parse|where|to|by|macro|define|end|exit|push|pop|first|next|prev|last|after|before|easter)\\b",
+					"name": "keyword.other.jamz"
+				},
+				{
+					"match": "^\\.\\.\\s*\\*",
+					"name": "keyword.other.jamz"
+				}
+			]
+		},
+		"string": 
+		{
+			"patterns": 
+			[
+				{
+					"begin": "\"",
+					"end": "\"",
+					"patterns": 
+					[
+						{"include": "embedded"}
+					],
+					"name": "string.quoted.double.jamz"
+				},
+				{
+					"begin": "'",
+					"end": "'",
+					"patterns": 
+					[
+						{"include": "embedded"}
+					],
+					"name": "string.quoted.single.jamz"
+				}
+			]
+		},
+		"comment": 
+		{
+			"patterns": 
+			[
+				{
+					"match": "^\\.\\.\\s*\\.\\s+.*",
+					"name": "comment.line.jamz"
+				}
+			]
+		}
+	},
+	"scopeName": "source.jamz"
+}

@@ -1,0 +1,51 @@
+{
+    "name": "jam-for-zos",
+    "displayName": "JAMZ Syntax Highlighter",
+    "description": "Syntax highlighter for the JAM-for-z/OS processor",
+    "version": "0.0.1",
+    "publisher": "androidarmstrong",
+    "engines": 
+    {
+        "vscode": "^1.52.0"
+    },
+    "categories": 
+    [
+        "Programming Languages"
+    ],
+    "contributes": 
+    {
+        "languages": 
+        [
+            {
+                "id": "jamz",
+                "aliases": 
+                [
+                    "JAMZ",
+                    "jamz"
+                ],
+                "extensions": 
+                [
+                    ".jam",
+                    ".jamz"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": 
+        [
+            {
+                "language": "jamz",
+                "scopeName": "source.jamz",
+                "path": "./syntaxes/jamz.tmLanguage.json",
+                "embeddedLanguages": 
+                {
+                    "meta.embedded.block.rexx": "rexx"
+                }
+            }
+        ]
+    },
+    "devDependencies": 
+    {
+        "js-yaml": "^4.0.0"
+    }
+}
