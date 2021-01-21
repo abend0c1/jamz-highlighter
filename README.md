@@ -1,7 +1,6 @@
 # JAMZ Syntax Highlighter README
 
-This is a syntax highlighter extension for the JAMZ (Just Another Macro language for z/OS)
-processor. 
+This is a syntax highlighter extension for the [JAMZ (Just Another Macro language for z/OS processor](https://github.com/abend0c1/jam)). 
 
 ## Features
 
@@ -20,7 +19,7 @@ embedded REXX expressions (which are enclosed by `[` and `]`):
 
   https://github.com/abend0c1/jam
 
-- If you want JAMZ syntax highlighting in VSCode then install this extension.
+- If you want JAMZ syntax highlighting in VSCode (when editing .jam or .jamz files) then install this extension.
 
 - If you also want embedded REXX syntax highlighting in VSCode then you will need to install
   a suitable REXX highlighter extension from the VSCode Marketplace (press `Ctrl+Shift+X` and type `rexx` into the search box).
