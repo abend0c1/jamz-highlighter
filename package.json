@@ -2,14 +2,20 @@
     "name": "jam-for-zos",
     "displayName": "JAMZ Syntax Highlighter",
     "description": "Syntax highlighter for the JAMZ (JAM-for-z/OS) processor",
+    "keywords": ["jam", "jamz", "zos", "rexx"],
     "repository": 
     {
         "type": "git",
         "url": "https://github.com/abend0c1/jamz-highlighter.git"
     },
+    "homepage": "https://github.com/abend0c1/jamz-highlighter/blob/master/README.md",
     "icon": "images/jamz-highlighter.png",
     "version": "0.0.1",
     "publisher": "androidarmstrong",
+    "author": 
+    {
+        "name": "Andrew Armstrong"
+    },
     "engines": 
     {
         "vscode": "^1.52.0"

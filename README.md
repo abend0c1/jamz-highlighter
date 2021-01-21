@@ -9,7 +9,7 @@ processor.
 - Highlights embedded REXX language statements
 
 Example showing highlighted JAMZ statements (which are prefixed by `..`) and 
-embedded REXX code (which is enclosed by `[` and `]`):
+embedded REXX expressions (which are enclosed by `[` and `]`):
 
 ![Image of JAMZ syntax highlighter](images/jamz-highlighter-screenshot.png)
 
