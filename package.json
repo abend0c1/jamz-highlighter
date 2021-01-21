@@ -1,7 +1,13 @@
 {
     "name": "jam-for-zos",
     "displayName": "JAMZ Syntax Highlighter",
-    "description": "Syntax highlighter for the JAM-for-z/OS processor",
+    "description": "Syntax highlighter for the JAMZ (JAM-for-z/OS) processor",
+    "repository": 
+    {
+        "type": "git",
+        "url": "https://github.com/abend0c1/jamz-highlighter.git"
+    },
+    "icon": "images/jamz-highlighter.png",
     "version": "0.0.1",
     "publisher": "androidarmstrong",
     "engines": 
