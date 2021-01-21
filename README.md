@@ -1,6 +1,6 @@
 # JAMZ Syntax Highlighter README
 
-This is a syntax highlighter extension for the [JAMZ (Just Another Macro language for z/OS processor](https://github.com/abend0c1/jam)). 
+This is a syntax highlighter extension for the [JAMZ (Just Another Macro language for z/OS) processor](https://github.com/abend0c1/jam). 
 
 ## Features
 
