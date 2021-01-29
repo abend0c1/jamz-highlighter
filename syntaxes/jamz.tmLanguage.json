@@ -41,10 +41,10 @@
 					"name": "keyword.other.jamz"
 				},
 				{
-					"match": "^\\.\\.\\s*(?i:askqu|askq|asku|ask)\\s+([A-Za-z!?_][A-Za-z!?_0-9]*)\\b",
+					"match": "\\b(?i:macro\\s+(?!:define|end|exit))([A-Za-z!?_@#$][A-Za-z0-9!?_@#$.]*)\\b",
 					"captures":
 					{
-						"1": {"name": "variable.rexx"}
+						"1": {"name": "entity.name.function.jamz"}
 					},
 					"name": "keyword.other.jamz"
 				},
@@ -57,11 +57,11 @@
 					"name": "keyword.operator.jamz"
 				},
 				{
-					"match": "^\\.\\.\\s*(?i:args|askqu|askq|asku|ask|auto|backup|br14|catalog|compress|copy|datevars|delete|get|getout|help|for|include|jcl|job|listcat|listvtoc|macro|map|mount|option|put|queue|queued|recover|rename|repro|restore|rexx|runon|say|scratch|set|ship|step|style|submit|sudo|table|tso|uncatalog|unmount|uss|xeq|xmit)\\b",
+					"match": "^\\.\\.\\s*(?i:args|auto|backup|br14|catalog|compress|copy|datevars|delete|get|getout|help|for|include|jcl|job|listcat|listvtoc|macro|map|mount|option|put|queue|queued|recover|rename|repro|restore|rexx|runon|say|scratch|set|ship|step|style|submit|sudo|table|tso|uncatalog|unmount|uss|xeq|xmit)\\b",
 					"name": "keyword.other.jamz"
 				},
 				{
-					"match": "\\b(?i:cancel|read|parse|where|to|by|macro|define|end|exit|push|pop|first|next|prev|last|after|before|easter)\\b",
+					"match": "\\b(?i:end|cancel|read|parse|where|to|by|push|pop|first|next|prev|last|after|before|easter)\\b",
 					"name": "keyword.other.jamz"
 				},
 				{
