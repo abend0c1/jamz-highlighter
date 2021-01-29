@@ -26,7 +26,7 @@ embedded REXX expressions (which are enclosed by `[` and `]`):
 
 ## Known Issues
 
-- JAMZ keywords are erroneously highlighted when present inside quoted strings.
+- None.
 
 ## Release Notes
 
