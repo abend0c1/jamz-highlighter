@@ -48,7 +48,7 @@
 							"name": "keyword.operator.jamz"
 						}
 					],
-					"name": "keyword.control.jamz"
+					"name": "keyword.other.jamz"
 				},
 				{
 					"match": "^\\.\\.\\s*(?i)(askqu|askq|asku|ask)\\s+([A-Za-z!?_@#$][!?_@#$.A-Za-z0-9]*)?\\b\\s*('.*')\\s+(.+)?",
