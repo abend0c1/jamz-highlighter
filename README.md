@@ -32,11 +32,11 @@ embedded REXX expressions (which are enclosed by `[` and `]`):
 
 - None.
 
-### 1.0.0
+### 0.0.1
 
 Initial release of JAMZ syntax highlighter.
 
-### 1.0.1
+### 0.0.2
 
 - Highlighted macro names (as function names)
 - Improved highlighting of the ask, askq, asku and askqu JAM verbs
