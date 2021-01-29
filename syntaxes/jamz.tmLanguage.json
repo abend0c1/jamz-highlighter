@@ -53,7 +53,7 @@
 					"name": "keyword.control.jamz"
 				},
 				{
-					"match": "([-,])$",
+					"match": "[-,]$",
 					"name": "keyword.operator.jamz"
 				},
 				{
