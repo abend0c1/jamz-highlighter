@@ -40,3 +40,11 @@ Initial release of JAMZ syntax highlighter.
 
 - Highlighted macro names (as function names)
 - Improved highlighting of the ask, askq, asku and askqu JAM verbs
+
+### 0.0.3
+
+- Corrected version number
+
+### 0.0.4 
+
+- Updated screen shot image
