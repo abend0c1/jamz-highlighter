@@ -31,7 +31,7 @@
 			"patterns": 
 			[
 				{
-					"begin": "^\\.\\.\\s*(?i:SET|REXX)\\b",
+					"begin": "^\\.\\.\\s*(?i)(SET|REXX)\\b",
 					"end": "$",
 					"contentName": "meta.embedded.block.rexx",
 					"patterns":
@@ -103,7 +103,7 @@
 					"name": "source.jamz"
 				},
 				{
-					"match": "^\\.\\.\\s*(?i:MACRO\\s+DEFINE)\\s+([A-Za-z!?_@#$][A-Za-z0-9!?_@#$.]*)\\b",
+					"match": "^\\.\\.\\s*(?i)MACRO\\s+DEFINE\\s+([A-Za-z!?_@#$][A-Za-z0-9!?_@#$.]*)\\b",
 					"captures":
 					{
 						"1": {"name": "entity.name.function.jamz"}
@@ -111,7 +111,11 @@
 					"name": "keyword.other.jamz"
 				},
 				{
-					"match": "\\b(?i:MACRO\\s+(?!:DEFINE|END|EXIT))([A-Za-z!?_@#$][A-Za-z0-9!?_@#$.]*)\\b",
+					"match": "^\\.\\.\\s*(?i)MACRO\\s+(END|EXIT)\\b",
+					"name": "keyword.other.jamz"
+				},
+				{
+					"match": "^\\.\\.\\s*(?i)MACRO\\s+(?!DEFINE|END|EXIT)([A-Za-z!?_@#$][A-Za-z0-9!?_@#$.]*)\\b",
 					"captures":
 					{
 						"1": {"name": "entity.name.function.jamz"}
@@ -119,7 +123,15 @@
 					"name": "keyword.other.jamz"
 				},
 				{
-					"match": "^\\.\\.\\s*(?i:IF|ELSE|SELECT|WHEN|OTHERWISE|END|QUIT)\\b",
+					"match": "(?i)MACRO\\s+(?!DEFINE|END|EXIT)([A-Za-z!?_@#$][A-Za-z0-9!?_@#$.]+)\\b",
+					"captures":
+					{
+						"1": {"name": "entity.name.function.jamz"}
+					},
+					"name": "keyword.other.jamz"
+				},
+				{
+					"match": "^\\.\\.\\s*(?i)(IF|ELSE|SELECT|WHEN|OTHERWISE|END|QUIT)\\b",
 					"name": "keyword.control.jamz"
 				},
 				{
@@ -127,16 +139,20 @@
 					"name": "keyword.operator.jamz"
 				},
 				{
-					"match": "^\\.\\.\\s*(?i:ARGS|AUTO|BACKUP|BR14|CATALOG|COMPRESS|COPY|DATEVARS|DELETE|GETOUT|GET|HELP|FOR|INCLUDE|JCL|JOB|LISTCAT|LISTVTOC|MACRO|MAP|MOUNT|OPTION|PUT|QUEUED|QUEUE|RECOVER|RENAME|REPRO|RESTORE|REXX|RUNON|SAY|SCRATCH|SET|SHIP|STEP|STYLE|SUBMIT|SUDO|TABLE|TSO|UNCATALOG|UNMOUNT|USS|XEQ|XMIT)\\b",
-					"name": "keyword.other.jamz"
-				},
-				{
-					"match": "\\b(?i:END|CANCEL|READ|PARSE|WHERE|TO|BY|PUSH|POP|FIRST|NEXT|PREV|LAST|AFTER|BEFORE|EASTER)\\b",
+					"match": "\\b(?i)(END|CANCEL|READ|PARSE|WHERE|TO|BY|PUSH|POP|FIRST|NEXT|PREV|LAST|AFTER|BEFORE|EASTER)\\b",
 					"name": "keyword.other.jamz"
 				},
 				{
 					"match": "^\\.\\.\\s*\\*",
 					"name": "keyword.other.jamz"
+				},
+				{
+					"match": "^\\.\\.\\s*(?i)(ARGS|AUTO|BACKUP|BR14|CATALOG|COMPRESS|COPY|DATEVARS|DELETE|FOR|GETOUT|GET|HELP|INCLUDE|JCL|JOB|LISTCAT|LISTVTOC|MACRO|MAP|MOUNT|OPTION|PUT|QUEUED|QUEUE|RECOVER|RENAME|REPRO|RESTORE|REXX|RUNON|SAY|SCRATCH|SET|SHIP|STEP|STYLE|SUBMIT|SUDO|TABLE|TSO|UNCATALOG|UNMOUNT|USS|XEQ|XMIT)\\b",
+					"name": "keyword.other.jamz"
+				},
+				{
+					"match": "^\\.\\.\\s*(?i)(?!ARGS|AUTO|BACKUP|BR14|CATALOG|COMPRESS|COPY|DATEVARS|DELETE|FOR|GETOUT|GET|HELP|INCLUDE|JCL|JOB|LISTCAT|LISTVTOC|MACRO|MAP|MOUNT|OPTION|PUT|QUEUED|QUEUE|RECOVER|RENAME|REPRO|RESTORE|REXX|RUNON|SAY|SCRATCH|SET|SHIP|STEP|STYLE|SUBMIT|SUDO|TABLE|TSO|UNCATALOG|UNMOUNT|USS|XEQ|XMIT)\\b.*",
+					"name": "invalid.illegal.jamz"
 				}
 			]
 		},
