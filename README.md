@@ -48,3 +48,7 @@ Initial release of JAMZ syntax highlighter.
 ### 0.0.4 
 
 - Updated screen shot image
+
+### 0.0.5
+
+- Improved syntax highlighting
